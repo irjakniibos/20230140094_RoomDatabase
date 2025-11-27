@@ -1,5 +1,6 @@
 package com.example.a20230140094_roomdatabase.repositori
 
+import android.app.Application
 import android.content.Context
 import com.example.a20230140094_roomdatabase.room.DatabaseSiswa
 
@@ -11,4 +12,8 @@ class ContainerDataApp(private val context: Context): containerApp{
     override val repositoriSiswa: RepositoriSiswa by lazy {
         OfflineRepositoriSiswa(DatabaseSiswa.getDatabase(context).siswaDao())
     }
+}
+
+class AplikasiSiswa : Application(){
+
 }
